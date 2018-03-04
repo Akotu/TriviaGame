@@ -1,0 +1,18 @@
+
+#timer {
+    text-align:center;
+}
+
+.b1 {
+    background-color: #DF811E;
+    color:#FBFBFB;
+    opacity: .5;
+}
+
+.myCard {
+    background-color: transparent !important;
+    text-align:center;
+}
+
+@font-face { font-family: got; src: url('../font/got.ttf'); } 
+

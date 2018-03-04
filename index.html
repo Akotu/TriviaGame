@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+        crossorigin="anonymous"></script>
+    <script src="assets/javascript/app.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trivia!</title>
+    <ul class="nav justify-content-center navbar-custom">
+        <li class="nav-item">
+            <a class="nav-link active custom" style="color:#535A5A; font-size:80px; font-family:got;">Game&nbsp;&nbsp;of&nbsp;&nbsp;Thrones&nbsp;&nbsp;Trivia</a>
+        </li>
+
+    </ul>
+</head>
+
+<body>
+
+    <body background="images/got.jpg">
+        <audio>
+            <source src="assets/music/startMusic.mp3" type="audio/ogg">
+        </audio>
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-12" style="height:20px;"></div>
+            </div>
+            <div class="row">
+                <div class="col-12" style="height:20px;"></div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card myCard" style="width: 1110px;">
+
+                        <div class="card-body myCard">
+                            <h5 class="card-title">How to play:</h5>
+                            <p class="card-text">You will be given 20 seconds to answer each questions designed to test your GoT knowledge!
+                                There is no category, you will need to know everything about this show or you will lose.
+                                Good Luck!</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div id="timer">
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div id="start">
+                        <button type="button" class="btn btn-secondary btn-lg btn-block b1">Start Game</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div id="question">
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div id="choices">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="correct">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="incorrect"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
