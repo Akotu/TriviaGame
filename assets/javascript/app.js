@@ -15,9 +15,7 @@ $(document).ready(function () {
     var wrongAnswers = 0;
     var gameArr = [question1, question2, question3, question4, question5];
 
-    for (i = 0; i < gameArr.length; i++) {
-        gameArr[i].hide();
-    }
+
 
 
 
@@ -26,9 +24,8 @@ $(document).ready(function () {
 
     $('.b1').on("click", function () {
         console.log(gameArr[0]);
-    //THIS WORKS BUT IT ADDS A STYLE OF DISPLAY:NONE TO MY HTML
-    //also it is going in to my timer div just for testing purposes 
-        $('#timer').html(gameArr[0]);
+        gameArr[0].show();
+
 
     });
 
