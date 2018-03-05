@@ -1,9 +1,6 @@
 $(document).ready(function () {
     console.log("ready!");
 
-
-
-
     var question1 = $('.q1');
     var question2 = $('.q2');
     var question3 = $('.q3');
@@ -13,25 +10,13 @@ $(document).ready(function () {
     var wrongAnswers = 0;
 
     var gameArr = [question1, question2, question3, question4, question5];
-    
+
     for (i = 0; i < gameArr.length; i++) {
-        
+
         gameArr[i].hide();
     }
 
-
-
-    
-
-
-
-
-
-
-
-
-
-    //Setting up audio for the start screen, make it loop so it never stops running
+//Setting up audio for the start screen, make it loop so it never stops running
     var audio1 = new Audio("assets/music/startMusic.mp3");
 
     audio1.addEventListener('ended', function () {
