@@ -1,125 +1,121 @@
 $(document).ready(function () {
-            console.log("ready!");
-
-            var pick;
-
-            var correctAnswer = 0;
-
-            var wrongAnswer = 0;
-
-            var unAnswer = 0;
-
-            var question = 0;
-
-            var images;
-
-            var counter = 10;
-
-            //Setting up audio for the start screen, make it loop so it never stops running if user decides to not start the game..
-            var audio1 = new Audio("assets/music/startMusic.mp3");
-
-            audio1.addEventListener('ended', function () {
-                this.currentTime = 0;
-                this.play();
-            }, false);
-            audio1.play();
-
-           
-                
+    console.log("ready!");
 
 
-            var mainQuestions = [{//0
-                
-                    question: "'The Mountain' is the nickname for which character?",
-                    choices: ["Gerold Clegane", "Sandor Clegane", "Oberyn Martell", "Gregor Clegane"],                   
-                    validAnswer: 3
-                },  {//1
-                    question: "Who is the youngest child of Lord Tywin Lannister?",
-                    choices: ["Tyrion Lannister", "Jon Snow", "Jaime Lannister", "Cersei Lannister"],
-                    validAnswer: 0
-
-                }, {//2
-                    question: "Who is the King of the North?",
-                    choices: ["Bran Stark", "Jon Snow", "Tommen Baratheon", "LittleFinger"],
-                    validAnswer: 1
-
-                }, {//3
-                    question: "Who is the head of house Stark?",
-                    choices: ["Tyrion Lannister", "Jon Snow", "Bran Stark", "Ned Stark"],
-                    validAnswer: 3
-
-                }, {//4
-                    question: "Which persons are the 'Night's Watch' trying to stop by using a giant wall of ice?",
-                    choices: ["White Walkers", "Wildings", "Mother of Dragons", "Night walkers"],
-                    validAnswer: 0
-
-                }
-
-            ];
-
-            $(".b1").on("click", function () {
-                $(this).hide();
-                $(".myCard").hide();
-                countdown();
-                showCountdown();
-                displayGame();
-                
-                
-              
-               
-            });
-
-            
-
-            
-
-            function countdown(){
-                seconds = 20;
-                $('#timer').html('<h3 style="font-family:got;">Time Remaining: ' + seconds + '</h3>');
-                
-                time = setInterval(showCountdown,1000);
-            }
-            function showCountdown(){
-                seconds--;
-                $('#timer').html('<h2 style="font-family:got;">Time Remaining: ' + seconds + '</h2>');
-                    if(seconds < 1){
-                        clearInterval(time);
-                        
-                        
-                }
-            }
 
 
-            function displayGame() {
-                $("#question").html(mainQuestions[0].question);
-                
-                
-                  var choicesArr = mainQuestions[0].choices;
-                  var buttonsArr = [];
-                
-                  for (let i = 0; i < choicesArr.length; i++) {
-                    var button = $('<button>');
-                    button.text(choicesArr[i]);
-                    button.attr('data-id', i);
-                    $('#choices').append(button);
-                   }
-                
-                  } 
-                
-                 $('#choices').on('click', 'button', function(){
-                 pick = $(this).data("id");
-                 mainQuestions[0].validAnswer;
-                 if(pick != mainQuestions[0].validAnswer) {
-                
-                 $('#choices').text("Nope!");
-                 wrongAnswer++;
-                
-                } else if (pick === mainQuestions[0].validAnswer) {
-                $('#choices').text("Good Job!");
-                correctAnswer++;
-                
-                }
-                
-                });
+    var question1 = $('.q1');
+    var question2 = $('.q2');
+    var question3 = $('.q3');
+    var question4 = $('.q4');
+    var question5 = $('.q5');
+    var correctAnswers = 0;
+    var wrongAnswers = 0;
 
-            });
+    var gameArr = [question1, question2, question3, question4, question5];
+    
+    for (i = 0; i < gameArr.length; i++) {
+        
+        gameArr[i].hide();
+    }
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    //Setting up audio for the start screen, make it loop so it never stops running
+    var audio1 = new Audio("assets/music/startMusic.mp3");
+
+    audio1.addEventListener('ended', function () {
+        this.currentTime = 0;
+        this.play();
+    }, false);
+    audio1.play();
+
+
+    function game() {
+        var answer = $("input[name='q']:checked").val();
+        if (answer === "correct") {
+            alert("Correct!");
+            correctAnswers = correctAnswers + 1
+        } else {
+            wrongAnswers = wrongAnswers + 1
+            alert("Wrong!");
+        }
+    }
+
+
+
+    $('.submit').on("click", function () {
+
+        // game();
+        // $('.q1').push(gameArr);
+        // console.log(gameArr);
+    })
+
+    $('.b1').on("click", function () {
+        $('#timer').html(gameArr[0]);
+    })
+
+
+    // $(".submit").on("click", function () {
+
+
+    //     var answer = $("input[name='q']:checked").val();
+    //     console.log(answer);
+
+    //     if (answer === "correct") {
+
+    //         $('.questions').append("<p style='color:green;'><b>CORRECT!</b></p>")
+    //         correctAnswers = correctAnswers + 1
+    //         setTimeout(() => {
+
+
+    //             $('.q1').hide();
+    //             $('.q2').show();
+
+    //         }, 1000);
+    //     } else {
+    //         $('.questions').append("<p style='color:red;'><b>Wrong!</b></p>");
+    //     }
+
+    //     console.log("you clicked submit!");
+    // })
+
+
+
+    function countdown() {
+        seconds = 60;
+        $('#timer').html('<h6>Time Remaining: ' + seconds + '</h6>');
+
+        time = setInterval(showCountdown, 1000);
+    }
+
+    function showCountdown() {
+        seconds--;
+        $('#timer').html('<h3>Time Remaining: ' + seconds + '</h3>');
+        if (seconds < 1) {
+            clearInterval(time);
+
+
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+});

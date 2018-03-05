@@ -42,9 +42,8 @@
 
                         <div class="card-body myCard">
                             <h5 class="card-title">How to play:</h5>
-                            <p class="card-text">You will be given 20 seconds to answer each questions designed to test your GoT knowledge!
-                                There is no category, you will need to know everything about this show or you will lose.
-                                Good Luck!</p>
+                            <p class="card-text">You will be given 1 minute to answer all 5 questions. These questions are designed to test your
+                                GoT knowledge! Good Luck!</p>
 
                         </div>
                     </div>
@@ -66,29 +65,83 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12">
-                    <div id="question">
-                    </div>
-                </div>
+                <div class="col-12 questions">
+                    <form name="quiz" onsubmit="return false">
+                        <div class="q1">
+                            
+                            <h1>The 'Mountain' is the nickname for which character?</h1>
+                            <input type="radio" name="q" value="wrong" id="q1a">a. &nbsp; Gerold Clegane
+                            <br>
+                            <input type="radio" name="q" value="wrong" id="q1b">b. &nbsp; Sandor clegane
+                            <br>
+                            <input type="radio" name="q" value="wrong" id="q1c">c. &nbsp; Oberyn Martell
+                            <br>
+                            <input type="radio" name="q" value="correct" id="q1d">d. &nbsp; Gregor Clegane
+                            <br>
+                            <button class="submit"  type="submit">Submit</button>
+                        </div>
+
+                        <div class="q2">
+                            <h2>Who is the youngest child of Lord Tywin Lannister?</h2>
+                            <input type="radio" name="q" value="correct" id="q2a">a. &nbsp; Tyrion Lannister
+                            <br>
+                            <input type="radio" name="q" value="wrong" id="q2b">b. &nbsp; Jaime Lannister
+                            <br>
+                            <input type="radio" name="q" value="wrong" id="q2c">c. &nbsp; Cersei Lannister
+                            <br>
+                            <input type="radio" name="q" value="wrong" id="q2d">d. &nbsp; Jon Snow
+                            <br>
+                            <button class="submit"  type="submit">Submit</button>
+                        </div>
+                        <div class="q3">
+
+                            <h3>Who is the King of the North?</h3>
+                            <input type="radio" name="q" value="wrong" id="q3a">a. &nbsp; Bran Stark
+                            <br>
+                            <input type="radio" name="q" value="correct" id="q3b">b. &nbsp; Jon Snow
+                            <br>
+                            <input type="radio" name="q" value="wrong" id="q3c">c. &nbsp; Tommen Baratheon
+                            <br>
+                            <input type="radio" name="q" value="wrong" id="q3d">d. &nbsp; LittleFinger
+                            <br>
+                            <button class="submit"  type="submit">Submit</button>
+                        </div>
+                        <div class="q4">
+
+                            <h4>Who is the head of house Stark?</h4>
+                            <input type="radio" name="q" value="wrong" id="q4a">a. &nbsp; Tyrion Lannister
+                            <br>
+                            <input type="radio" name="q" value="wrong" id="q4b">b. &nbsp; Jon Snow
+                            <br>
+                            <input type="radio" name="q" value="wrong" id="q4c">c. &nbsp; Bran Stark
+                            <br>
+                            <input type="radio" name="q" value="correct" id="q4d">d. &nbsp; Ned Stark
+                            <br>
+                            <button class="submit"  type="submit">Submit</button>
+                        </div>
+                        <div class="q5">
+
+                            <h5>Which persons are the 'Night's Watch' trying to stop by using a giant wall of ice?</h5>
+                            <input type="radio" name="q" value="correct" id="q5a">a. &nbsp; White Walkers
+                            <br>
+                            <input type="radio" name="q" value="wrong" id="q5b">b. &nbsp; Wildings
+                            <br>
+                            <input type="radio" name="q" value="wrong" id="q5c">c. &nbsp; Mother of Dragons
+                            <br>
+                            <input type="radio" name="q" value="wrong" id="q5d">d. &nbsp; Night walkers
+                            <br>
+                            <button class="submit"  type="submit">Submit</button>
+                        </div>
+                    </form>
 
 
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div id="choices">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-6">
-                    <div class="correct">
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="incorrect"></div>
                 </div>
             </div>
         </div>
+
+
+
+
     </body>
 
 </html>
